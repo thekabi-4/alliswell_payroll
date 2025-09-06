@@ -1,0 +1,9 @@
+streamlit
+pandas
+openpyxl
+streamlit-option-menu
+python-dateutil
+Flask
+reportlab
+Werkzeug
+xlrd
