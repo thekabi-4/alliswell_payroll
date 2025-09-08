@@ -1,4 +1,4 @@
-# 🏥 All Is Well Payroll & Attendance System
+# 🏥 All Is Well Attendance System
 
 A complete **Attendance & Payroll Management System** for **All Is Well Hospital** and **Super Clinic**, built with **Python, Streamlit, and SQLite**. It enables uploading, parsing, validating, and processing attendance sheets, applying hospital-specific leave policies, and generating payroll-ready reports.
 
@@ -129,3 +129,4 @@ This project is licensed under the Proprietary License.
 ## 👨‍💻 Author
 
 **Kabilesh** – [GitHub](https://github.com/thekabi-4)
+
