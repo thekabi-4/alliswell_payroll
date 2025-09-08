@@ -1,29 +1,131 @@
-# All Is Well Attendance Calculator
+# 🏥 All Is Well Payroll & Attendance System
 
-A desktop application for processing attendance data for All Is Well Hospital and Super Clinic.
+A complete **Attendance & Payroll Management System** for **All Is Well Hospital** and **Super Clinic**, built with **Python, Streamlit, and SQLite**. It enables uploading, parsing, validating, and processing attendance sheets, applying hospital-specific leave policies, and generating payroll-ready reports.
 
-## Features
-- Process Excel attendance files
-- Apply organization-specific leave policies
-- Generate summary and detailed reports
-- Export reports to CSV
-- Copy data to clipboard
+---
 
-## Installation
-Download the appropriate executable for your system:
-- Windows: `AllIsWell_Attendance.exe`
-- macOS: `AllIsWell_Attendance.app`
+## ✨ Features
 
-## Usage
-1. Run the application
-2. Select your organization type
-3. Upload an attendance Excel file
-4. Parse and store the data
-5. Apply leave policies
-6. View and export reports
+* 📤 **Upload Attendance Files** (Excel)
+* ⚙️ **Parse Data** into SQLite for structured processing
+* 📋 **Apply Leave Policies**
 
-## Building from Source
-1. Install Python 3.8+
-2. Run the build script for your OS:
-   - Windows: `build_windows.bat`
-   - macOS: `build_mac.sh`
+  * ✅ 9-day attendance rule for eligibility
+  * ✅ Weekly offs & Casual Leaves (CL) management
+  * ✅ Consultant leave policies (pre & post-2023 joining)
+* 📊 **Reports**
+
+  * Attendance summary per employee
+  * Detailed month-wise breakdown
+  * Export to CSV
+* 🖥 **Streamlit Frontend** with modern UI
+* 🗄 **SQLite Database** backend with schema for employees & attendance tracking
+
+---
+
+## 🚀 Tech Stack
+
+* **Frontend**: Streamlit
+* **Backend**: Python 3.11+
+* **Database**: SQLite
+* **Packaging**: PyInstaller / auto-py-to-exe
+
+---
+
+## 📦 Installation
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/thekabi-4/alliswell_payroll.git
+cd alliswell_payroll
+```
+
+### 2️⃣ Create Virtual Environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # macOS/Linux
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Usage
+
+### Run as a Streamlit App
+
+```bash
+streamlit run app.py
+```
+
+### OR
+
+### Run as a Streamlit App
+
+```bash
+alliswellpayroll.streamlit.app
+```
+
+* Select `app.py`
+* Choose **One Directory** or **One File**
+* Add DB & assets under *Additional Files*
+* Build ✅
+
+---
+
+## 📂 Project Structure
+
+```
+alliswell_payroll/
+│── app.py                 # Streamlit frontend
+│── hospital.py            # Hospital leave policy logic
+│── superclinic.py         # Super Clinic leave policy logic
+│── db/attendance.db       # SQLite database (generated)
+│── requirements.txt       # Dependencies
+│── README.md              # Documentation
+└── assets/                # Icons, images, etc.
+```
+
+---
+
+## 📝 Leave Policy Highlights
+
+* **Hospital Staff**: Eligible for paid weekly off only after 9 days attendance.
+* **Consultants**:
+
+  * Joined **before 2023-01-01** → 13 CL per year.
+  * Joined **after 2023-01-01** → 12 CL per year.
+  * CL allocated in **two halves**: Jan–Jun & Jul–Dec.
+
+---
+
+## 📊 Reports
+
+* **Summary Report**: Total present, absent, leaves, weekly offs.
+* **Detailed Report**: Day-wise attendance with applied leave policies.
+* **CSV Export** for payroll processing.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to improve.
+
+---
+
+## 📜 License
+
+This project is licensed under the Proprietary License.
+
+---
+
+## 👨‍💻 Author
+
+**Kabilesh** – [GitHub](https://github.com/thekabi-4)
